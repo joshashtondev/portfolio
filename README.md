@@ -18,21 +18,23 @@ See:
 <h4>Development Environment</h4>
 
 ```
-git clone https://github.com/quaxlyqueen/portfolio
-cd portfolio
-npm install
+git clone https://github.com/joshashtondev/portfolio
+cd portfolio/server
 node src/server.js &
+cd ../client
+npm install
 npm start
 ```
 
 <h4>Production Environment</h4>
 
 ```
-git clone https://github.com/quaxlyqueen/portfolio
-cd portfolio
+git clone https://github.com/joshashtondev/portfolio
+cd portfolio/server
+node src/server.js &
+cd ../client
 npm run build
 cd dist
-node ../src/server.js &
 serve -s
 ```
 
@@ -91,7 +93,7 @@ serve -s
 - [X] CI/CD (v.0.0.2)
 - [ ] Security:
   - [ ] Separate user for self-hosting, with reduced permissions. (v.0.0.2)
-  - [ ] Dockerize (v.0.0.2)
+  - [x] Dockerize (v.0.0.2)
 - [ ] .down-indicator popup text on hover, "scroll down to see my projects!"
 - [ ] Rewrite CSS into components/modules (v.0.0.2)
 - [ ] Read in data for portfolio a plain text files. (v.0.0.2)
