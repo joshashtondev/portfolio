@@ -1,0 +1,18 @@
+---
+
+services:
+  portfolio:
+    build: $HOME/portfolio/client
+    container_name: portfolio
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    depends_on:
+      - portfolio_api
+
+  portfolio_api:
+    build: $HOME/portfolio/api
+    container_name: portfolio_api
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
